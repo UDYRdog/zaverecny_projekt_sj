@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <?php include ('C:\xampp\htdocs\project\inc\head.php'); ?>
+       <?php include ('inc\head.php'); ?>
     </head>
 <body>
     
      <!-- header -->
-     <?php include ('C:\xampp\htdocs\project\inc\header.php'); ?>
+     <?php include ('inc\header.php'); ?>
 
     <section class="page-heading">
         <div class="container">
@@ -269,7 +269,7 @@
 
 
     <footer>
-        <?php include ('C:\xampp\htdocs\project\inc\footer.php'); ?>
+        <?php include ('inc\footer.php'); ?>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

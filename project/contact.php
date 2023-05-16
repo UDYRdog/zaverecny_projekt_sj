@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <?php include ('C:\xampp\htdocs\project\inc\head.php'); ?>
+       <?php include ('inc\head.php'); ?>
     </head>
     
 
 <body>
     
     <!-- header -->
-    <?php include ('C:\xampp\htdocs\project\inc\header.php'); ?>
+    <?php include ('inc\header.php'); ?>
 
 
     <section class="page-heading">
@@ -31,29 +31,9 @@
                     <div class="section-heading">
                         <h2>Message</h2>
                     </div>
-                    <form id="contact" action="" method="post">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
-                                </fieldset>
-                                <fieldset>
-                                    <input name="email" type="text" class="form-control" id="email" placeholder="Your email..." required="">
-                                </fieldset>
-                                <fieldset>
-                                    <input name="phone" type="text" class="form-control" id="phone" placeholder="Your phone..." required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-md-6">
-                                <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                                </fieldset>
-                                <fieldset>
-                                    <button type="submit" id="form-submit" class="btn">Send Message</button>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </form>
+                    <?php 
+                        include('inc/contact_form.php')
+                    ?>
                 </div>
                 <div class="col-md-6">
                     <div class="section-heading contact-info">
@@ -88,7 +68,7 @@
 
 
     <footer>
-        <?php include ('C:\xampp\htdocs\project\inc\footer.php'); ?>
+        <?php include ('inc\footer.php'); ?>
     </footer>
 
 
