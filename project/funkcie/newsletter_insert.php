@@ -14,8 +14,6 @@ if(isset($_POST['form-submit'])){
             $query_run->execute($data);
             if(isset($_SERVER['HTTP_REFERER'])){
                 header("Location: {$_SERVER['HTTP_REFERER']}");
-            }else{
-                header("Location: index.php");
             }
         }catch(PDOException $e){
             print_r($e->getMessage());
