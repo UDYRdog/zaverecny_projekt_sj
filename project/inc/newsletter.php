@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-md-4 col-md-offset-3">
                         <fieldset>
-                            <input name="email" type="text" class="form-control" id="email" placeholder="Enter your email here..." required="">
+                            <input  type="text" name = "email" class="form-control" id ="email"  placeholder="Enter your email here..." required="">
                         </fieldset>
                     </div>
                     <div class="col-md-2">

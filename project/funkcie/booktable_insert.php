@@ -3,8 +3,11 @@ include('../funkcie/databaza.php');
 $db =  new Database();
 $conn = $db->conn;
 
+
+
+
 if(isset($_POST['form-submit'])){
-    $sql = "SELECT id FROM contact";
+    $sql = "SELECT id FROM reservation";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -23,14 +26,15 @@ if(isset($_POST['form-submit'])){
 
         $data = [
             'id' => $id,
-            'meno' => $_POST["name"],
-            'email' => $_POST["email"],
+            'day' => $_POST["day"],
+            'hour' => $_POST["hour"],
+            'name' => $_POST["name"],
             'phone' => $_POST["phone"],
-            'message' => $_POST["message"]
+            'person' => $_POST["person"]
         ];
 
         try{
-            $query = "INSERT INTO contact (id,meno,email,phone,message) VALUES (:id,:meno,:email,:phone,:message)";
+            $query = "INSERT INTO reservation (id,day,time,full_name,phone_number,person_count) VALUES (:id,:day, :hour,:name,:phone,:person)";
             $query_run = $db->conn->prepare($query);
             $query_run->execute($data);
 
